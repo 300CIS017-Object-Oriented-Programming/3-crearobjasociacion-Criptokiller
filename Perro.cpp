@@ -1,4 +1,7 @@
 #include "Perro.h"
+#include "Veterinario.h"
+#include "Propietario.h"
+#include "Raza.h"
 #include <iostream>
 
 
@@ -13,6 +16,10 @@ Perro::Perro() {
     this->color = "";
 }
 
+Perro :: Perro(string dogName, int dogAge, string dogBreed, string dogColor, string dogSize) :
+    nombre(dogName), edad(dogAge), raza(dogBreed), tamanio(dogSize), color(dogColor){}
+
+
 void Perro::ladrar() {
     std::cout << "Guau Guau" << std::endl;
 }
@@ -23,11 +30,28 @@ void Perro::agregarPropietario(std::string nombre, std::string docIdentidad) {
     this->pPropietario = new Propietario(nombre, docIdentidad);
 }
 
+
 void Perro::setPropietario(Propietario *pPropietario) {
     this->pPropietario = pPropietario;
 }
 Propietario *Perro::getPropietario() {
     return this->pPropietario;
+}
+
+void Perro :: setVeterinario(Veterinario *pVeterinario){
+    this->pVeterinario = pVeterinario;
+}
+
+Veterinario* Perro :: getVet(){
+    return pVeterinario;
+}
+
+void Perro :: setBreed(Breed* pBreed){
+    this->pBreed = pBreed;
+}
+
+Breed* Perro :: getBreed(){
+    return pBreed;
 }
 
 int Perro::getEdad() {
