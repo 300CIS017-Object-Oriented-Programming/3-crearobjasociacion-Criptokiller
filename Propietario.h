@@ -1,6 +1,11 @@
-//
-// Created by lufe y Gonzo Feb2024.
-//
+/*
+
+Nombre: Daniel Felipe Barrera Zapata
+Código: 8983498
+Profesor: Gonzalo Noreña 
+Fecha: 10/02/2024
+
+*/
 
 #ifndef PROPIETARIO_H
 #define PROPIETARIO_H

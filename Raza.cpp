@@ -1,3 +1,12 @@
+/*
+
+Nombre: Daniel Felipe Barrera Zapata
+Código: 8983498
+Profesor: Gonzalo Noreña 
+Fecha: 10/02/2024
+
+*/
+
 #include "Raza.h"
 #include <string>
 
