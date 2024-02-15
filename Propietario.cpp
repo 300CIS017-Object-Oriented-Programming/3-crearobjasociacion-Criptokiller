@@ -1,21 +1,63 @@
-//
-// Created by lufe y Gonzo Feb2024.
-//
+/*
+
+Nombre: Daniel Felipe Barrera Zapata
+Código: 8983498
+Profesor: Gonzalo Noreña 
+Fecha: 10/02/2024
+
+*/
 
 #include "Propietario.h"
 
 //TODO Agrege el constructor por defecto y agrege un constructor con dos parametros
 
 
-Propietario::Propietario(std::string nombre, std::string docIdentidad) {
- this->nombre = nombre;
- this->docIdentidad = docIdentidad;
+Propietario :: Propietario(){}
+
+Propietario::Propietario(string nombre, string docIdentidad) {
+    this->nombre = nombre;
+    this->docIdentidad = docIdentidad;
 }
 
-std::string Propietario::getNombre()  {
+Propietario :: Propietario(string nombre){
+    this->nombre = nombre;
+}
+
+void Propietario ::setNombre(string nombre) {
+    this->nombre = nombre;
+}
+
+void Propietario :: setOwnerIdentity(string ID){
+    docIdentidad = ID;
+}
+
+void Propietario :: setOwnerAge(int ownerAge){
+    propietarioEdad = ownerAge;
+}
+
+string Propietario :: getNombre(){
     return nombre;
 }
 
-void Propietario::setNombre(std::string nombre) {
-    this->nombre = nombre;
+int Propietario :: getOwnerAge(){
+    return propietarioEdad;
 }
+
+string Propietario :: getID(){
+    return docIdentidad;
+}
+
+vector<string> Propietario :: mostrarInfo(){
+    
+    vector<string> information;
+
+    string stringAge = to_string(propietarioEdad);
+
+    information.push_back(nombre);
+    information.push_back(docIdentidad);
+    information.push_back(stringAge);
+
+    return information;
+}
+
+
